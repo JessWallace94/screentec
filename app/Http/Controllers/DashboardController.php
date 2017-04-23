@@ -3,7 +3,7 @@
 
 namespace ScreenTec\Http\Controllers;
 
-use ScreenTec\Models\Vehicle;
+use ScreenTec\Models;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller

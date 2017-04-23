@@ -19,5 +19,19 @@ Route::group(['middleware' => 'auth'], function() {
     'uses' => 'DashboardController@index',
   ]);
 
+  Route::get('/support', [
+    'as' => 'support',
+    'uses' => 'PagesController@support',
+  ]);
+
+  Route::resource('customers', 'CustomersController');
+
+  //Route::resource('vehicles', 'VehiclesController');
+
+//  Route::resource('quotes', 'QuotesController');
+
+//  Route::resource('line_items', 'LineItemsController');
+
+
 
 });

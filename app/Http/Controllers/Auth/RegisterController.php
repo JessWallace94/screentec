@@ -2,7 +2,7 @@
 
 namespace ScreenTec\Http\Controllers\Auth;
 
-use ScreenTec\User;
+use ScreenTec\Models\User;
 use ScreenTec\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.

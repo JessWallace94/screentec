@@ -11,7 +11,9 @@
     <title>{{ config('app.name', 'Screen-Tec Windscreens') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ elixir('css/all.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
+
 
     <!-- Scripts -->
     <script>
@@ -71,11 +73,15 @@
                 </div>
             </div>
         </nav>
-
+        @include('flash::message')
         @yield('content')
+      
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript">
+      $('div.alert').not('.alert-important').delay(3000).slideUp(300);
+    </script>
 </body>
 </html>

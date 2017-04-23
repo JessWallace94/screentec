@@ -27,7 +27,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function customer_owned_by() {
-      $this->hasMany('ScreenTec\Models\Customer');
+    /*
+    * A user can have many customers
+    * @return \Illuminate\Database\Eloquent\Relations\HasMany
+    */
+    public function customers() {
+      return $this->hasMany('ScreenTec\Models\Customer');
     }
 }
