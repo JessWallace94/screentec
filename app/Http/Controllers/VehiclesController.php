@@ -83,5 +83,18 @@ class VehiclesController extends Controller
       return redirect('vehicles');
     }
 
+    /**
+     * Remove the vehicle from the database and pivot
+     *
+     * @return \Illuminate\Http\Response
+     */
+     public function destroy($id) {
+       $vehicle = Vehicle::findOrFail($id);
+       $vehicle->delete();
+       flash('Vehicle has been created');
+       return redirect('vehicles');
+     }
+
+
 
 }

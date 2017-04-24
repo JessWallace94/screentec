@@ -87,5 +87,17 @@ class CustomersController extends Controller
       return redirect('customers');
     }
 
+    /**
+     * Delete a customer and it's pivot relation
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+     public function destroy($id) {
+       $customer = Customer::findOrFail($id);
+       $customer->vehicles()-detach();
+     }
+
+
 
 }
