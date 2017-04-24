@@ -15,7 +15,7 @@
         </ul>
       </div>
       <div class="col-md-9">
-        Main Section
+        <h1>Dashboard</h1>
       </div>
     </div>
 </div>

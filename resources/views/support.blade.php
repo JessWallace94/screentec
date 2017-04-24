@@ -15,7 +15,7 @@
         </ul>
       </div>
       <div class="col-md-9">
-        Support
+        <h1>Support</h1>
       </div>
     </div>
 </div>
