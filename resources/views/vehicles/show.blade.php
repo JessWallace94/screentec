@@ -26,6 +26,28 @@
           <p>{{ $vehicle->year_of_manufacture }}</p>
         </div>
 
+        @unless ($vehicle->customers->isEmpty())
+        <div class="customer-vehicle">
+          <h2>Customer</h2>
+          <table class="table">
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+              <th>Actions</th>
+            </tr>
+            @foreach($vehicle->customers as $customer)
+            <tr>
+              <td>{{ $customer->name }}</td>
+              <td>{{ $customer->email }}</td>
+              <td>{{ $customer->phone_number }}</td>
+              <td><a href="{{ url('/customers', $customer->id )}}">View</a></td>
+            </tr>
+            @endforeach
+          </table>
+          @endunless
+        </div>
+
       </div>
     </div>
 </div>

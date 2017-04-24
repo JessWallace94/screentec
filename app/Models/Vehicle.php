@@ -20,7 +20,7 @@ class Vehicle extends Model
   * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
   */
   public function customers() {
-    return $this->belongsToMany('ScreenTec\Models\Customer');
+    return $this->belongsToMany('ScreenTec\Models\Customer')->withTimestamps();
   }
 
 }

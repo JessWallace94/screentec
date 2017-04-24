@@ -38,7 +38,8 @@ class VehiclesController extends Controller
      */
 
     public function create() {
-      return view('vehicles.create');
+      $customers = Customer::pluck('name', 'id');
+      return view('vehicles.create', compact('customers'));
     }
 
     /**
@@ -51,8 +52,8 @@ class VehiclesController extends Controller
       // Create a vehicle from data pulled in from form
      $vehicle = Vehicle::create($request->all());
 
-      // Updating the pivot table
-      //$customer->vehicles()->attach($request->input('vehicles'));
+     // Updating the pivot table
+     $vehicle->customers()->attach($request->input('customers'));
 
       flash('Vehicle has been created')->important();
       return redirect('vehicles');
