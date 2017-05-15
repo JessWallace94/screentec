@@ -95,7 +95,4 @@ class VehiclesController extends Controller
        flash('Vehicle has been created');
        return redirect('vehicles');
      }
-
-
-
 }
